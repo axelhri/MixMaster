@@ -7,7 +7,6 @@ const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 export const loader = async () => {
   try {
     const response = await fetch(url);
-    console.log(response);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }

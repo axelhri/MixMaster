@@ -4,7 +4,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Assure-toi d'importer les styles
+import "react-toastify/dist/ReactToastify.css";
 import SharedLayout from "../react-router/layout/SharedLayout.jsx";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -44,11 +44,11 @@ function ReactRouter() {
             const { name, email } = data;
 
             if (!name.trim() || !email.trim()) {
-              toast.error("Veuillez remplir tous les champs !"); // Notification d'erreur
+              toast.error("Veuillez remplir tous les champs !");
               return null;
             }
 
-            toast.success("Formulaire soumis avec succès !"); // Notification de succès
+            toast.success("Formulaire soumis avec succès !");
             return redirect("/");
           },
         },
@@ -59,7 +59,7 @@ function ReactRouter() {
   return (
     <>
       <RouterProvider router={router} />
-      <ToastContainer /> {/* Ajouter le conteneur des toasts ici */}
+      <ToastContainer />
     </>
   );
 }
